@@ -22,4 +22,7 @@ public class Category {
   @ManyToMany(mappedBy = "categories", cascade = CascadeType.ALL)
   private Set<Book> books = new HashSet<>();
 
+  public Set<Book> getBooks() {
+    return books;
+  }
 }

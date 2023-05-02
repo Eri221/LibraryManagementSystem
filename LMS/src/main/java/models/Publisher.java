@@ -1,5 +1,6 @@
 package models;
 
+import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 import javax.persistence.CascadeType;
@@ -21,4 +22,8 @@ public class Publisher {
   private String name;
   @ManyToMany(mappedBy = "publishers", cascade = CascadeType.ALL)
   private Set<Book> books = new HashSet<>();
+
+  public Set<Book> getBooks() {
+    return books;
+  }
 }
