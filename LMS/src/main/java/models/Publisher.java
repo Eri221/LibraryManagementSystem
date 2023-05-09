@@ -23,6 +23,10 @@ public class Publisher {
   @ManyToMany(mappedBy = "publishers", cascade = CascadeType.ALL)
   private Set<Book> books = new HashSet<>();
 
+  public Publisher(String name) {
+    this.name = name;
+  }
+
   public Set<Book> getBooks() {
     return books;
   }
