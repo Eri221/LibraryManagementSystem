@@ -1,6 +1,5 @@
-package models;
+package com.example.lms.models;
 
-import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 import javax.persistence.CascadeType;
@@ -13,17 +12,17 @@ import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "publishers")
-public class Publisher {
+@Table(name = "categories")
+public class Category {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
-  @Column(nullable = false, unique = true)
+  @Column(nullable = false,unique = true)
   private String name;
-  @ManyToMany(mappedBy = "publishers", cascade = CascadeType.ALL)
+  @ManyToMany(mappedBy = "categories", cascade = CascadeType.ALL)
   private Set<Book> books = new HashSet<>();
 
-  public Publisher(String name) {
+  public Category(String name) {
     this.name = name;
   }
 

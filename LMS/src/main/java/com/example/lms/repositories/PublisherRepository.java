@@ -1,6 +1,6 @@
-package repositories;
+package com.example.lms.repositories;
 
-import models.Publisher;
+import com.example.lms.models.Publisher;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

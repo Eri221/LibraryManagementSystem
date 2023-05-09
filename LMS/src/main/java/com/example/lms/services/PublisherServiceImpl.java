@@ -1,10 +1,10 @@
-package services;
+package com.example.lms.services;
 
 import java.util.List;
 import java.util.Optional;
-import models.Publisher;
+import com.example.lms.models.Publisher;
 import org.springframework.stereotype.Service;
-import repositories.PublisherRepository;
+import com.example.lms.repositories.PublisherRepository;
 
 @Service
 public class PublisherServiceImpl implements PublisherService{

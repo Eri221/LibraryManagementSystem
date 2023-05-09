@@ -1,7 +1,7 @@
-package services;
+package com.example.lms.services;
 
 import java.util.List;
-import models.Author;
+import com.example.lms.models.Author;
 
 public interface AuthorService {
 List<Author> findAllAuthors();

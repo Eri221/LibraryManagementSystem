@@ -1,9 +1,9 @@
-package services;
+package com.example.lms.services;
 
 import java.util.List;
-import models.Author;
+import com.example.lms.models.Author;
 import org.springframework.stereotype.Service;
-import repositories.AuthorRepository;
+import com.example.lms.repositories.AuthorRepository;
 
 @Service
 public class AuthorServiceImpl implements AuthorService{

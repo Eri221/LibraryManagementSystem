@@ -1,7 +1,7 @@
-package services;
+package com.example.lms.services;
 
 import java.util.List;
-import models.Book;
+import com.example.lms.models.Book;
 
 public interface BookService {
   public List<Book> findAllBooks();

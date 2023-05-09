@@ -1,17 +1,14 @@
 package com.example.lms;
 
-import models.Author;
-import models.Book;
-import models.Category;
-import models.Publisher;
+import com.example.lms.models.Author;
+import com.example.lms.models.Book;
+import com.example.lms.models.Category;
+import com.example.lms.models.Publisher;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
-import repositories.BookRepository;
-import services.BookService;
-import services.BookServiceImpl;
+import com.example.lms.services.BookService;
 
 @SpringBootApplication
 public class LmsApplication implements CommandLineRunner {

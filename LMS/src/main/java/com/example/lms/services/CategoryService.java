@@ -1,7 +1,7 @@
-package services;
+package com.example.lms.services;
 
 import java.util.List;
-import models.Category;
+import com.example.lms.models.Category;
 
 public interface CategoryService {
 List<Category> listAllCategories();

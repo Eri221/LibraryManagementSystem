@@ -1,4 +1,4 @@
-package models;
+package com.example.lms.models;
 
 import java.util.HashSet;
 import java.util.Set;

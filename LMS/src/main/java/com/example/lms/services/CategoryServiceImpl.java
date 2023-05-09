@@ -1,10 +1,10 @@
-package services;
+package com.example.lms.services;
 
 import java.util.List;
 import java.util.Optional;
-import models.Category;
+import com.example.lms.models.Category;
 import org.springframework.stereotype.Service;
-import repositories.CategoryRepository;
+import com.example.lms.repositories.CategoryRepository;
 
 @Service
 public class CategoryServiceImpl implements CategoryService{

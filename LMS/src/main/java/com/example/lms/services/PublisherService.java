@@ -1,7 +1,7 @@
-package services;
+package com.example.lms.services;
 
 import java.util.List;
-import models.Publisher;
+import com.example.lms.models.Publisher;
 
 public interface PublisherService {
 List<Publisher> findAllPublishers();

@@ -1,10 +1,10 @@
-package services;
+package com.example.lms.services;
 
 import java.util.List;
-import models.Book;
+import com.example.lms.models.Book;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import repositories.BookRepository;
+import com.example.lms.repositories.BookRepository;
 
 @Service
 public class BookServiceImpl implements BookService{
