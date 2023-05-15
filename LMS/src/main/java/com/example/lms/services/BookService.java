@@ -8,4 +8,6 @@ public interface BookService {
   public Book findBookById(Long id);
   public void createBook(Book book);
   public void deleteBook(Long id);
+
+  void updateBook(Book book);
 }

@@ -34,4 +34,9 @@ public class BookServiceImpl implements BookService{
     Book book = bookRepository.findById(id).orElseThrow(()-> new RuntimeException("Book not found"));
     bookRepository.deleteById(book.getId());
   }
+
+  @Override
+  public void updateBook(Book book) {
+    bookRepository.save(book);
+  }
 }
