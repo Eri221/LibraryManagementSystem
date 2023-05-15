@@ -25,23 +25,37 @@ public class CategoryController {
     return "categories";
   }
   @GetMapping("remove-category/{id}")
-  public String deleteBook(@PathVariable Long id, Model model){
+  public String deleteCategory(@PathVariable Long id, Model model){
     categoryService.deleteCategory(id);
     model.addAttribute("categories",categoryService.listAllCategories());
     return "categories";
   }
   @GetMapping("update-category/{id}")
-  public String updateBook(@PathVariable Long id, Model model){
+  public String updateCategory(@PathVariable Long id, Model model){
     Category category = categoryService.findCategoryById(id);
     model.addAttribute("category",category);
     return "update-category";
   }
   @PostMapping("/save-update/{id}")
-  public String updateBook(@PathVariable Long id, Category category, BindingResult result, Model model){
+  public String updateCategory(@PathVariable Long id, Category category, BindingResult result, Model model){
     if(result.hasErrors()){
       return "update-category";
     }
     categoryService.updateCategory(category);
+    model.addAttribute("categories", categoryService.listAllCategories());
+    return "redirect:/categories";
+  }
+  @GetMapping("add-category")
+  public String addCategory(Category category,Model model){
+    model.addAttribute("category",category);
+    return "add-category";
+  }
+  @PostMapping("/save-category")
+  public String updateCategory(Category category, BindingResult result, Model model){
+    if(result.hasErrors()){
+      return "add-category";
+    }
+    categoryService.createCategory(category);
     model.addAttribute("categories", categoryService.listAllCategories());
     return "redirect:/categories";
   }
