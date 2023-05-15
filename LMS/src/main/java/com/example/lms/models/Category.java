@@ -26,7 +26,27 @@ public class Category {
     this.name = name;
   }
 
+  public Category() {
+
+  }
+
   public Set<Book> getBooks() {
     return books;
+  }
+
+  public Long getId() {
+    return id;
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public void setBooks(Set<Book> books) {
+    this.books = books;
   }
 }
