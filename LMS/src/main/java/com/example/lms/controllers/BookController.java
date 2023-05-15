@@ -17,15 +17,19 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class BookController {
 
-  @Autowired
-  private BookService bookService;
 
+  private final BookService bookService;
+  private final CategoryService categoryService;
+  private final PublisherService publisherService;
+  private final AuthorService authorService;
   @Autowired
-  private CategoryService categoryService;
-  @Autowired
-  private PublisherService publisherService;
-  @Autowired
-  private AuthorService authorService;
+  public BookController(BookService bookService, CategoryService categoryService, PublisherService publisherService, AuthorService authorService){
+    this.authorService = authorService;
+    this.categoryService = categoryService;
+    this.publisherService =publisherService;
+    this.bookService = bookService;
+  }
+
 
   @GetMapping("/books")
   public String findAllBooks(Model model){
