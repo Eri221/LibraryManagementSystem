@@ -66,4 +66,21 @@ public class BookController {
     model.addAttribute("books", bookService.findAllBooks());
     return "redirect:/books";
   }
+  @GetMapping("add-book")
+  public String addBook(Book book,Model model){
+    model.addAttribute("book",book);
+    model.addAttribute("categories",categoryService.listAllCategories());
+    model.addAttribute("publishers", publisherService.findAllPublishers());
+    model.addAttribute("authors",authorService.findAllAuthors());
+    return "add-book";
+  }
+  @PostMapping("/save-book")
+  public String updateBook(Book book, BindingResult result, Model model){
+    if(result.hasErrors()){
+      return "add-book";
+    }
+    bookService.createBook(book);
+    model.addAttribute("books", bookService.findAllBooks());
+    return "redirect:/books";
+  }
 }
